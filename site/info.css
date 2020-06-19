@@ -1,0 +1,107 @@
+/*
+
+Gulp
+Vamos estudar as práticas de performance ao longo do curso independente de ferramentas. Mas, para facilitar a aplicação de algumas delas, usaremos o Gulp. Então prepare seu ambiente para ter o node e o gulp.
+
+1) Instale o Node.js. Baixe em nodejs.org e faça a instalação.
+
+2) Execute npm install -g gulp-cli para instalar o Gulp globalmente.
+
+3) No terminal, entre na pasta do projeto: cd performance-web
+
+4) Execute npm install na pasta do projeto para instalar as dependências do projeto
+
+
+
+
+
+
+na pasta do path 
+
+npm install uglifyjs -g
+
+npm install -g uglify-js
+
+uglifyjs site/assets/js/busca.js -o dist/assets/js/busca.js = joga na pasta dist os arquivos minificados 
+
+npm install 
+
+npm install gulp-cli -g 
+
+gulp minify-js = minifica todos os arquivos da pasta dist
+
+gulp minify = minifica todos os arquivos 
+
+gulp copy minify  = 
+
+
+site para otimizar imagens, remove todos os metadados desnecessários do arquivo
+
+https://kraken.io/ = Lossless
+
+https://tinypng.com/
+
+https://jakearchibald.github.io/svgomg/ = otimizando arquivos svg 
+
+Site de gráficos de consumo na web 
+
+https://httparchive.org/
+
+
+Otimizações automatizadas 
+
+Windows 
+https://riot-optimizer.com/ 
+
+
+/************************************************************************
+
+
+Nas aulas eu mostrei algumas ferramentas simplificadas para otimizar imagens. Mas existem várias outras mais hardcore para quem quiser elevar seu nível nerd em otimização de imagens.
+
+Relembrando algumas das online que mostrei: kraken, tinypng, jpegmini e svgomg.
+
+Também falei de versões Desktop de duas ferramentas famosas: ImageOptim (Mac) e RIOT (Windows).
+
+Mas em linha de comando um mundo de possibilidades se abre. Algumas que acho bem promissoras:
+
+mozjpeg - Recompressor de JPEG feito pela Mozilla que gera arquivos bem menores e com melhor qualidade, ainda mantendo compatibilidade com o JPEG (mais aqui e versão online aqui).
+
+pngnq / pngquant - Mudam um PNG pra PNG8 com palheta fixa de 256 cores. É uma compressão lossy com excelentes resultados em desenhos menos complexos (como ícones). Tem uma GUI excelente chamada ImageAlpha (Mac).
+
+E indo além de apenas otimizar as imagens:
+
+ZorroSVG - Permite criar "JPEGs com transparência". Muita gente usa foto em PNG por causa da transparência mas isso é péssimo pra performance. O zorro usa filtros SVG pra separar a layer de transparência em uma mask separada. Na prática, JPEG com transparência.
+
+///////////////////////////////////////////////////////////////////////////
+
+Existem muitos detalhes em como os formatos de imagem funcionam. E se você for bastante aventureiro e curioso, é um assunto bem bacana pra ler. (ALERTA: prepare-se pra mergulhar por horas se clicar nos links abaixo :-)
+
+Alguns links bem bacanas pra você começar a se aprofundar nos formatos:
+
+O pngthermal que mostra mapa de calor com eficiência da compressão do PNG.
+
+PNG Compression : 5 simple improvements
+
+Série do Colt McAnlis do Google:
+
+How PNG Works
+Reducing PNG File Size
+How JPEG Works
+Reducing JPEG File Size
+
+gcloud app browse
+
+gcloud app deploy app.yaml
+
+Ferramentas para monitorar site 
+
+https://developers.google.com/speed/pagespeed/insights/?hl=pt-BR
+
+https://www.webpagetest.org/
+
+
+*/
+
+
+
