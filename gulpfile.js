@@ -1,11 +1,8 @@
 /*
-
     Gulpfile de exemplo para algumas ações clássicas de otimização.
     
     Para aprender mais sobre Gulp, veja o Curso Online de Gulp do Alura:
-
         https://www.alura.com.br/curso-online-gulp
-
  */
 
 
@@ -31,7 +28,7 @@ gulp.task('clean', function() {
 gulp.task('minify-js', function() {
   return gulp.src('site/**/*.js')
     .pipe($.uglify())
-    .pipe(gulp.dest('dist/site/'))
+    .pipe(gulp.dest('dist/'))
 });
 
 gulp.task('minify-css', function() {
@@ -101,5 +98,3 @@ gulp.task('revreplace', ['rev'], function(){
 gulp.task('minify', ['minify-js', 'minify-css', 'minify-html']);
 gulp.task('build', $.sequence(['minify-js', 'minify-css', 'imagemin'], 'useref', 'revreplace'));
 gulp.task('default', $.sequence('clean', 'copy', 'build'));
-
-
