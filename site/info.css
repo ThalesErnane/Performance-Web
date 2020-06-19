@@ -101,6 +101,13 @@ https://developers.google.com/speed/pagespeed/insights/?hl=pt-BR
 https://www.webpagetest.org/
 
 
+Concatenação de arquivos css utilizando gulp 
+
+    <!-- build:css css/combined.css -->
+    <link href="css/one.css" rel="stylesheet">
+    <link href="css/two.css" rel="stylesheet">
+    <!-- endbuild -->
+
 */
 
 
