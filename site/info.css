@@ -100,6 +100,7 @@ https://developers.google.com/speed/pagespeed/insights/?hl=pt-BR
 
 https://www.webpagetest.org/
 
+https://cursos-performance.uc.r.appspot.com/
 
 Concatenação de arquivos css utilizando gulp 
 
@@ -107,6 +108,56 @@ Concatenação de arquivos css utilizando gulp
     <link href="css/one.css" rel="stylesheet">
     <link href="css/two.css" rel="stylesheet">
     <!-- endbuild -->
+
+
+https://console.cloud.google.com/appengine?project=cursos-performance&serviceId=default
+
+
+ultilizando imagemagic para converter imagens no sprites
+
+https://imagemagick.org/script/download.php
+
+
+gulp imagemin
+gulp minify
+gulp useref
+
+https://jonneal.dev/svg4everybody/
+
+A ténica de usar <symbol> é muito útil mas não funciona em todos os navegadores. Em especial, IEs mais antigos. Mas, para isso, podemos usar um polyfill.
+
+Uma bem famosa é a svg4everybody. Basta adicionar um script simples na página e chamar svg4everybody(). Deixei isso pronto no projeto já em assets/js/svg4everybody.js.
+
+Então acrescente no HTML:
+
+<script src="assets/js/svg4everybody.js"></script>
+Não esqueça de regerar o HTML com gulp useref
+
+
+
+ Tamanho ideal para o HTML é de 14kb 
+
+ 14KB de dados já gzipados.
+
+Importante observar que temos 14KB livres para dados HTTP. E isso inclui não só o documento HTML como os cabeçalhos HTTP.
+
+Vale a pena checar se seu servidor está configurado para mandar 10 segmentos em novas conexões TCP. Servidores novos com kernel recente já fazem isso.
+
+Ultilizando 2 dominios 
+
+
+server {
+  listen 3030;
+  root /Users/alura/performance-web/dist;
+
+  gzip on;
+  gzip_types text/css application/javascript image/svg+xml;
+
+  location /assets {
+    expires 1y;
+    add_header Cache-Control public;
+  }
+}
 
 */
 
